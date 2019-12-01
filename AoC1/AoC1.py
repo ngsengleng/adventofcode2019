@@ -14,7 +14,6 @@ print(total)
 
 #part2
 total = 0
-
 for line in lines:
     while line > 0:
         out = math.floor(line/3)-2
