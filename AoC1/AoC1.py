@@ -1,7 +1,7 @@
 import math
 
 #setup
-with open(r"C:\Users\-\Desktop\AoC 2019\AoC 1\AoC1.txt") as f:
+with open(r"AoC1.txt") as f:
     lines = f.readlines()
     lines[:] = [line.strip("\n") for line in lines]
     lines[:] = [int(line) for line in lines]
