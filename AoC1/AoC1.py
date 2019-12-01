@@ -3,22 +3,22 @@ import math
 #setup
 with open(r"AoC1.txt") as f:
     lines = f.readlines()
-    lines[:] = [line.strip("\n") for line in lines]
-    lines[:] = [int(line) for line in lines]
+    lines = map(int, map(lambda x: x.strip(), lines))
+    lines = list(lines)
 
 #part1
-sum = 0
+total = 0
 for line in lines:
-    out = math.floor(int(line)/3)-2
-    sum = sum + out
-print(sum)
+    total += math.floor(line/3)-2  
+print(total)
 
 #part2
-sum = 0
+total = 0
+
 for line in lines:
     while line > 0:
-        out = math.floor(int(line)/3)-2
+        out = math.floor(line/3)-2
         if out > 0:
-            sum = sum + out
+            total = total + out
         line = out
-print(sum)
+print(total)
