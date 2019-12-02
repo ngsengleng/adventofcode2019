@@ -1,8 +1,7 @@
 #part1
 with open(r"AoC2.txt") as f:
-    numbers = str(f.readlines()).replace("'", "").replace("[","").replace("]","").split(",")
+    numbers = list(map(int,f.read().split(",")))
 
-numbers = [int(x) for x in numbers]
 numbers2 = numbers.copy() #for part2
 numbers[1] = 12
 numbers[2] = 2
