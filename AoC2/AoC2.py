@@ -22,8 +22,8 @@ print(numbers[0])
 #part2
 cNumbers = numbers2.copy()
 while True:
-    for a in range (59,100):
-        for b in range(30,100):
+    for a in range (0,100):
+        for b in range(0,100):
             cNumbers[1] = a
             cNumbers[2] = b
             x = 0
