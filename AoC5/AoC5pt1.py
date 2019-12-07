@@ -8,12 +8,13 @@ i,a,b = 0,0,0 # a and b are parameters
 
 
 while True:
-    if code[i][-2:] == "99":                                    
+    opcode = int(code[i][-2:])
+    if opcode == 99:                                    
         break
-    elif code[i][-2:] == "3":                                   
+    elif opcode == 3:                                   
         code[int(code[i+1])] = inpt
         i += 2
-    elif code[i][-2:] == "4" or code[i][-2:] == "04":
+    elif opcode == 4:
         if len(code[i]) == 3:
             if code[i][-3] == "1":
                 output = code[i+1]
@@ -42,7 +43,7 @@ while True:
         else:
                 a = int(code[int(code[i+1])])
                 b = int(code[int(code[i+2])])
-        if code[i][-2:] == "01" or code[i][-2:] == "1":
+        if opcode == 1:
             code[int(code[i+3])] = str(a + b)
         else:
             code[int(code[i+3])] = str(a * b)
