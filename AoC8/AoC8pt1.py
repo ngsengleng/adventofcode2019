@@ -10,16 +10,12 @@ prev = 0
 key = 0
 ans = 0
 
-for i in range(len(image)):
-    if i%size == 0:
-        imageCount += 1
-        zeros,ones,twos = 0,0,0
-    if image[i] == '0':
-        zeros += 1
-    elif image[i] == '1':
-        ones += 1
-    else:
-        twos += 1            
+for i in range(0,len(image),size):
+    imageCount += 1
+    img = image[i:i+size]
+    zeros = img.count("0")
+    ones = img.count("1")
+    twos = img.count("2")
     imageFile[imageCount] = [zeros,ones,twos]
 
 
@@ -34,3 +30,5 @@ for i in imageFile:
 
   
 print(key,ans)
+
+
