@@ -1,4 +1,3 @@
-from collections import defaultdict
 with open("AoC8.txt") as f:
     image = str(f.read())
 width = 25
