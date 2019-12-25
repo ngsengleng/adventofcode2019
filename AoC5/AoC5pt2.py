@@ -1,4 +1,4 @@
-with open("AoC5.txt") as f:
+with open("test.txt") as f:
     code = list(map(str,f.read().split(",")))
 
 inpt = 5

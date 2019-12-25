@@ -51,7 +51,6 @@ while True:
                 inpt = '-1'
             else:
                 inpt = '0'
-
         #print(output)
         i += 2
     else:
